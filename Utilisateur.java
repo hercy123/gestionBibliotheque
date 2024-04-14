@@ -13,7 +13,7 @@ public class Utilisateur {
         this.livresEmpruntes = new ArrayList<>();
         this.cotisationAJour = false;
     }
-//  // l'initialisation de Getther et Setter pour acceder et modifier les attributs
+//  // l'initialisation de Getther et Setter pour accéder et modifier les attributs
     public String getNom() {
         return nom;
     }
