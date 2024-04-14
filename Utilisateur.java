@@ -86,7 +86,7 @@ public class Utilisateur {
             numero++;
         }
     }
-// cette méthode nous permet de payer les cotisations (le montant à payer devrait être supperieur à 5000)
+// cette méthode nous permet de payer les cotisations (le montant à payer devrait être supperieur ou égale à 5000)
     public void payerCotisation(Scanner sc){
         int montant;
         do {
