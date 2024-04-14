@@ -10,7 +10,7 @@ class Livre{
         this.anneePublication = anneePublication;
         this.quantite = quantite;
     }
-    // 
+    // c'est un constructeur de recopie qui prend livre en parametre
     Livre(Livre l){
         this(l.titre,l.auteur,l.ISBN,l.anneePublication,l.quantite);
     }
@@ -74,7 +74,7 @@ class Livre{
                 ", anneePublication=" + this.anneePublication +
                 '}');
     }
-    // c'est une methode qui permet de comparer si deux livres sont identiques ou pas (ccriteur de comparaison titre et auteur)
+    // c'est une methode qui permet de comparer si deux livres sont identiques ou pas (criteur de comparaison titre et auteur)
     public boolean equals(Livre l){
         return (this.titre.equalsIgnoreCase(l.titre) && this.auteur.equalsIgnoreCase(l.auteur));
     }
