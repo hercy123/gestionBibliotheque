@@ -1,19 +1,19 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 public class Utilisateur {
-
+// la declaration des attributs  
     private String nom;
     private int numeroIdentification;
     private ArrayList<Livre> livresEmpruntes;
     private boolean cotisationAJour;
-
+// c'est un constructeur qui permet d'initialiser les attributs
     public Utilisateur(String nom, int numeroIdentification) {
         this.nom = nom;
         this.numeroIdentification = numeroIdentification;
         this.livresEmpruntes = new ArrayList<>();
         this.cotisationAJour = false;
     }
-
+//  // l'initialisation de Getther et Setter pour acceder et modifier les attributs
     public String getNom() {
         return nom;
     }
@@ -46,7 +46,7 @@ public class Utilisateur {
         this.cotisationAJour = cotisationAJour;
     }
     
-
+// cette méthode nous permet d'emprunter un livre
     public void emprunterLivre(Bibliotheque bibliotheque) {
         Livre livre = bibliotheque.rechercherLivre();
         if (livre != null) {
@@ -57,7 +57,7 @@ public class Utilisateur {
        
     }
     
-
+// cette méthode nous permet de retourner un livre qui a été emprunté
     public void retournerLivre(Bibliotheque bibliotheque) {
         Scanner scanner = new Scanner(System.in);
         int numero;
@@ -73,7 +73,7 @@ public class Utilisateur {
         } while (numero > this.livresEmpruntes.size() || numero <=0);
         bibliotheque.enregistrerRetourLivre(this, this.livresEmpruntes.get(numero - 1));
     }
-
+// cette méthode nous permet d'afficher les livres empruntés 
     public void afficherLivreEmpruntee(){
         if (this.livresEmpruntes.isEmpty()) {
             System.out.println(this.nom+" n'a aucun emprunt en cours");
@@ -86,7 +86,7 @@ public class Utilisateur {
             numero++;
         }
     }
-
+// cette méthode nous permet de payer les cotisations (le montant à payer devrait être supperieur à 5000)
     public void payerCotisation(Scanner sc){
         int montant;
         do {
