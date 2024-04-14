@@ -1,8 +1,8 @@
 class Livre{
-    
+    // declaration des attributs
     private String titre,auteur,ISBN;
     private int anneePublication, quantite;
-    
+    // c'est un constructeur qui permet d'initialiser les attributs
     Livre(String titre,String auteur,String ISBN,int anneePublication, int quantite){
         this.titre = titre;
         this.auteur = auteur;
@@ -10,11 +10,11 @@ class Livre{
         this.anneePublication = anneePublication;
         this.quantite = quantite;
     }
-    
+    // 
     Livre(Livre l){
         this(l.titre,l.auteur,l.ISBN,l.anneePublication,l.quantite);
     }
-
+     // l'initialisation de Getther et Setter pour acceder et modifier les attributs
     public void setTitre(String titre)
     {
         this.titre = titre;
@@ -64,6 +64,7 @@ class Livre{
         return this.quantite;
     }
 
+ // la methode toString qui s'occupe de l'affichage d'un livre avec tous les details
     public String toString() {
         return ("Livre{" +
                 "titre='" + this.titre + '\'' +
@@ -73,7 +74,7 @@ class Livre{
                 ", anneePublication=" + this.anneePublication +
                 '}');
     }
-
+    // c'est une methode qui permet de comparer si deux livres sont identiques ou pas (ccriteur de comparaison titre et auteur)
     public boolean equals(Livre l){
         return (this.titre.equalsIgnoreCase(l.titre) && this.auteur.equalsIgnoreCase(l.auteur));
     }
