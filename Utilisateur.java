@@ -13,7 +13,7 @@ public class Utilisateur {
         this.livresEmpruntes = new ArrayList<>();
         this.cotisationAJour = false;
     }
-//  // l'initialisation de Getther et Setter pour accéder et modifier les attributs
+//  // l'initialisation de Getter et Setter pour accéder et modifier les attributs
     public String getNom() {
         return nom;
     }
@@ -86,7 +86,7 @@ public class Utilisateur {
             numero++;
         }
     }
-// cette méthode nous permet de payer les cotisations (le montant à payer devrait être supperieur ou égale à 5000)
+// cette méthode nous permet de payer les cotisations (le montant à payer devrait être superieur ou égale à 5000)
     public void payerCotisation(Scanner sc){
         int montant;
         do {
